@@ -1,0 +1,2 @@
+# Tareas_BioinfRepro2020_FrancyLRSanabria
+Repositorio curso bioinformatica 2020
