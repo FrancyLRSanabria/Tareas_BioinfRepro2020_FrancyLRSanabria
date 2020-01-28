@@ -1,0 +1,40 @@
+---
+title: "Tarea 3.4"
+author: "Francy Lorena Ramos Sanabria"
+date: "1/28/2020"
+output: html_document
+---
+Hacer un script a partir de los datos guardados en PracUni3/ejemplosgenerales/data/reads.txt
+
+```{r, echo=FALSE}
+read.delim(file ="../data/reads.txt")
+```
+
+Delimitar el comando para leer el archivo en R
+
+```{r, echo=FALSE}
+Librerias<- read.delim(file ="../data/reads.txt")
+```
+
+Hacer un barplot de reads por muestra
+
+```{r, echo=FALSE}
+barplot(Librerias$nreads)
+```
+
+Poner títulos al grafico y a cada eje
+
+```{r, echo=FALSE}
+barplot(Librerias$nreads)
+title(main="Barplot Librerias", xlab ="sample library", ylab ="nreads", cex=0.5, pch=19)
+```
+
+Colorear cada librería cambiando la paleta de colores
+
+```{r Librerias, echo=FALSE}
+palette(c("magenta","cyan","orange"))
+barplot(Librerias$nread, col=Librerias$Library)
+title(main="Barplot Librerias", xlab ="sample library", ylab ="nreads", cex=0.5, pch=19)
+legend(x="topleft", legend=levels(Librerias$Library), fill=palette()[1:3])
+```
+
